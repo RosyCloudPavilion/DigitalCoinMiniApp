@@ -1,0 +1,8 @@
+<van-card class="card" wx:for="{{ lists }}" data-index="{{index}}"  title="{{item.name}}">
+  <view  class="price" slot="price">
+    <p>{{item.percent}}</p>
+  </view>
+  <view class="time" slot="num">
+    <p>{{item.amomon}}</p>
+  </view>
+</van-card>

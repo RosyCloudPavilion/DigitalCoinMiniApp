@@ -1,0 +1,32 @@
+   <p class="block">融资历史</p> 
+<van-card wx:if="{{rongzi.length==0}}" class="card" title="暂无">
+</van-card>
+   
+   <van-card wx:if="{{rongzi.length>0}}" class="card" wx:for="{{ rongzi }}" data-index="{{index}}"  title="{{item.investorName}}">
+   <view class="card_desc" slot="desc">
+          <p>轮次:{{item.round}}\n</p>
+          <p>公布时间:{{item.pubTime}}</p>
+        </view>
+  <view  class="price" slot="price">
+    <p>金额:{{item.money}} </p>
+  </view>
+  <view class="time" slot="num">
+    <p>投资比例:{{item.share}}</p>
+  </view>
+</van-card>
+
+   <p class="block">投资事件</p> 
+<van-card wx:if="{{touzi.length==0}}" class="card" title="暂无">
+</van-card>
+<van-card class="card" wx:for="{{ touzi }}" data-index="{{index}}"  title="{{item.organization_name}}">
+   <view class="card_desc" slot="desc">
+          <p>轮次:{{item.lunci}}\n</p>
+          <p>公布时间:{{item.tzdate}}</p>
+        </view>
+   <view  class="price" slot="price">
+    <p>金额:{{item.money}} </p>
+  </view>
+  <view class="time" slot="num">
+    <p>{{item.product}}</p>
+  </view>
+</van-card>

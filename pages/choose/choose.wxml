@@ -1,0 +1,19 @@
+<!--pages/choose/choose.wxml-->
+<view class="header">
+  <p class="head">风险预警服务 | </p>
+  <p class="summary">区块链溯源、穿透式挖掘\n全要素、可视化</p>
+</view>
+<van-grid column-num="1" border="{{ false }}">
+  <van-grid-item use-slot>
+    <van-button type="info" class="button" block bind:click="toApp" data-id="0">包打听</van-button>
+  </van-grid-item>
+  <van-grid-item use-slot>
+    <van-button type="info" class="button" block bind:click="toApp" data-id="1">口岸风险预警</van-button>
+  </van-grid-item>
+  <van-grid-item use-slot>
+    <van-button type="info" class="button" block bind:click="toApp" data-id="2">供应链风险及施策仿真</van-button>
+  </van-grid-item>
+  <van-grid-item use-slot>
+    <van-button type="info" class="button" block bind:click="toApp" data-id="3">数字货币风险预警</van-button>
+  </van-grid-item>
+</van-grid>

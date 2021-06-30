@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/graph/graph",
+    "pages/people/people",
+    "pages/transaction/transaction",
+    "pages/link/link",
+    "pages/project/project",
+    "pages/event/event",
+    "pages/consensus/consensus",
+    "pages/holder/holder",
+    "pages/tourong/tourong",
+    "pages/report/report",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "交易风险预警",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

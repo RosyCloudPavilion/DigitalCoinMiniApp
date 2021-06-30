@@ -1,0 +1,30 @@
+<!--pages/report/report.wxml-->
+<van-cell-group>
+  <van-field
+    label="标题："
+  />
+<van-cell title="主题：" >
+  <view >
+      <van-dropdown-menu>
+      <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
+    </van-dropdown-menu>
+  </view>
+</van-cell>
+
+  <van-field
+    label="信息来源："
+  />
+  <van-field
+    label="用户邮箱："
+  />
+ <van-field
+    value="{{ message }}"
+    label="简单描述：	"
+    type="textarea"
+    autosize
+  />
+</van-cell-group>
+<view class="load">
+    <!-- <van-loading color="#1989fa" /> -->
+    <van-button icon="comment-circle-o" type="info" size="small" bind:click="submit">提交</van-button>
+</view>

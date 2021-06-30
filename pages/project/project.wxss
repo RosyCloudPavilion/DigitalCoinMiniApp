@@ -1,0 +1,36 @@
+/* pages/project/project.wxss */
+.price{
+  color: #b55233;
+  display: inline-block;
+  font-size: 28rpx;
+}
+
+.num{
+  float: right;
+  font-size: 35rpx;
+}
+
+.card{
+  display: block;
+}
+
+.title{
+  margin: 80rpx;
+  font-size: 30rpx;
+  display: block;
+  color: #b55233;
+  text-align: center;
+}
+
+.load{
+  height: 60rpx;
+  text-align: center;
+  margin-top: 60rpx;
+}
+
+.echart{  
+    display: block;
+    height: 1500rpx;
+    margin-top: 40rpx;
+    width: 100%;
+}

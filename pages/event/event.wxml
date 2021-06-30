@@ -1,0 +1,19 @@
+<!--pages/project/project.wxml-->
+<van-notify id="van-notify" />
+<p class="title">{{event.title}}</p>
+<p class="score">来源: {{event.source}}</p>
+<p class="score">时间: {{event.time}}</p>
+   <van-collapse value="{{ activeNames }}" bind:change="onChange">
+      <van-collapse-item title="风险合作企业" name="0">
+        <van-cell border="{{ false }}" value="{{item.name}}" wx:for="{{ event.related_comp }}" bindtap="bindCompanyTap" data-id="{{item.id}}"/>
+      </van-collapse-item>
+    </van-collapse>
+<view class="load">
+    <!-- <van-loading color="#1989fa" /> -->
+    <van-button icon="cluster-o" type="info" size="small" bind:click="toVisible">查看可视化分析</van-button>
+    </view>
+    <view class="echart" style="{{loading?'position:absolute;margin-left:50000rpx':'margin-left:0rpx'}}">
+      <ec-canvas id="mychart-dom-bar" type="2d" canvas-id="mychart-bar" ec="{{ ec }}" ></ec-canvas>
+      </view>
+<text class="content">{{event.content}}</text>
+

@@ -1,0 +1,5 @@
+<!--pages/project/project.wxml-->
+<p class="title">{{consensus.title}}</p>
+<p class="score">情感评分: <span style="{{consensus.score>=0?'color:green':'color:red'}}">{{consensus.score}}</span></p>
+<text class="content">{{consensus.content}}</text>
+

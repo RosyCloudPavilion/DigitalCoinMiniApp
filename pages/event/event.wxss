@@ -1,0 +1,34 @@
+/* pages/consensus/consensus.wxss */
+.title{
+  margin: 40rpx 80rpx;
+  font-size: 30rpx;
+  display: block;
+  color: #b55233;
+  text-align: center;
+}
+
+.score{
+  margin: 30rpx 60rpx;
+  font-size: 30rpx;
+  display: block;
+  text-align: right;
+}
+
+.content{
+  padding: 40rpx;
+  line-height: 60rpx;
+  display: block;
+}
+
+.load{
+  height: 60rpx;
+  text-align: center;
+  margin-top: 60rpx;
+}
+
+.echart{  
+    display: block;
+    height: 1500rpx;
+    margin-top: 40rpx;
+    width: 100%;
+}

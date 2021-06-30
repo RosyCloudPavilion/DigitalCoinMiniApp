@@ -1,0 +1,31 @@
+/* pages/choose/choose.wxss */
+.header{
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center;     /* 垂直居中 */
+  padding: 40rpx 0;
+  background-color: #1e50a2; 
+  margin-bottom:60rpx;
+}
+
+.head{
+  font-size: 40rpx;
+  color: white;
+  display: inline-block;
+}
+
+.summary{
+  padding:10rpx;
+  font-size: 28rpx;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  width: 320rpx;
+  white-space:pre;
+  background-color:#b55233; 
+  margin-left: 20rpx;
+}
+
+.button{
+  width: 80%
+}

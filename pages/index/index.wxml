@@ -1,0 +1,80 @@
+<view>
+  <view class="header">
+  <p class="head">异常交易识别｜</p>
+  <p class="summary">穿透式挖掘\n全要素、可视化\n</p>
+  </view>
+  <van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="查企业">
+     <van-search
+      input-align="center"
+      placeholder="请输入企业名等关键词"
+      bind:change="onSearchComp"
+    />
+      <van-card class="card" wx:for="{{ comps }}" wx:for-item="comp" wx:key="id" data-recordNo="{{comp.recordNo}}" data-index="{{index}}" data-id="{{comp.id}}" bindtap="bindViewTap"
+      desc="描述信息"
+      title="{{comp.short_name}}"
+      desc="{{comp.desc}}"
+      thumb="{{comp.img}}">
+      <view  class="price" slot="price">
+        <p>{{comp.risk!=""?'综合异常指数':''}}</p>
+      </view>
+      <view class="num" style="{{comp.risk>60?'color:red':'color:green'}}" slot="num">
+        <p>{{comp.risk!=null?comp.risk:'暂无'}}</p>
+      </view>
+    </van-card>
+        <p class="bchain">*数据取自可信中国区块链</p>
+      </van-tab>
+    <van-tab title="查人员">
+         <van-search
+          input-align="center"
+          placeholder="请输入招投标项目名等关键词"
+          bind:search="onSearchProject"
+        />
+        <van-card class="card" wx:for="{{ comps }}" wx:for-item="comp" wx:key="id" data-recordNo="{{comp.recordNo}}" data-index="{{index}}" data-id="{{comp.id}}" bindtap="bindPeopleTap"
+      title="交易账户{{comp.id}}">
+      <view  class="price" slot="price">
+        <p>{{comp.risk!=""?'综合异常指数':''}}</p>
+      </view>
+      <view class="num" style="{{comp.risk>60?'color:red':'color:green'}}" slot="num">
+        <p>{{comp.risk!=null?comp.risk:'暂无'}}</p>
+      </view>
+    </van-card>
+        <!-- <van-card class="card" wx:for="{{ projects }}" wx:for-item="project" data-index="{{index}}" data-id="{{project.id}}" bindtap="bindProjectTap" title="{{project.title}}">
+        <view class="card_desc" slot="desc">
+          <p class="pcomp">\n</p>
+          <p class="pcomp_title">投标企业:</p>
+          <p>{{project.relatedComp}}</p>
+          <p class="pcomp">\n</p>
+        </view>
+        <view  class="price" slot="price">
+          <p>{{project.risk!=""?'综合异常指数':''}}</p>
+        </view>
+        <view class="num" style="{{project.risk>60?'color:red':'color:green'}}" slot="num">
+          <p>{{project.risk!=null?project.risk:'暂无'}}</p>
+        </view>
+      </van-card> -->
+          <p class="bchain">*数据取自可信中国区块链</p>
+      </van-tab>
+
+      <van-tab title="查交易">
+         <van-search
+          input-align="center"
+          placeholder="请输入热点事件名等关键词"
+          bind:search="onSearchEvent"
+        />
+        <van-card class="card" wx:for="{{ comps }}" wx:for-item="comp" wx:key="id" data-recordNo="{{comp.recordNo}}" data-index="{{index}}" data-id="{{comp.id}}" bindtap="bindTranTap"
+      title="交易记录{{comp.id}}"
+      desc="交易量: $10, 币种:$, 时间：2021:06:30 12:01">
+      <view  class="price" slot="price">
+        <p>{{comp.risk!=""?'综合异常指数':''}}</p>
+      </view>
+      <view class="num" style="{{comp.risk>60?'color:red':'color:green'}}" slot="num">
+        <p>{{comp.risk!=null?comp.risk:'暂无'}}</p>
+      </view>
+    </van-card>
+          <p class="bchain">*数据取自可信中国区块链</p>
+      </van-tab>
+  </van-tabs>  
+</view>
+
+

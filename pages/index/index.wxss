@@ -1,0 +1,82 @@
+.text {
+  width: 100%;
+  margin-top: 5px;
+  color: #7d7e80;
+  font-size: 14px;
+  text-align: center;
+}
+
+.block{
+  padding: 30rpx;
+  text-align: center;
+  margin-top: 40rpx;
+}
+.header{
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center;     /* 垂直居中 */
+  padding: 40rpx 0;
+  background-color: #1e50a2; 
+}
+
+.head{
+  font-size: 40rpx;
+  color: white;
+  display: inline-block;
+}
+
+.summary{
+  padding:10rpx;
+  font-size: 28rpx;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  width: 350rpx;
+  white-space:pre;
+  background-color:#b55233; 
+}
+
+.price{
+  color: #b55233;
+  display: inline-block;
+  font-size: 28rpx;
+}
+
+.num{
+  float: right;
+  font-size: 35rpx;
+}
+
+.time{
+  float: right;
+  font-size: 25rpx;
+}
+
+.card{
+  margin-top: 40rpx;
+  display: block;
+}
+
+.card_desc{
+  white-space: pre-line;
+}
+
+.pcomp{
+  display: block;
+  width: 100%;
+}
+
+.pcomp_title{
+  color:#1e50a2; 
+  display: block;
+  width: 100%;
+  font-weight: bold;
+}
+
+.bchain{
+  margin: 20rpx 20rpx;
+  font-size: 25rpx;
+  display: block;
+  float: right;
+  color: #1800a3;
+}

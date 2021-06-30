@@ -1,0 +1,24 @@
+<!--pages/project/project.wxml-->
+<p class="title">{{project.title}}</p>
+<van-cell-group>
+  <van-cell title="综合风险指数">
+     <view style="{{project.risk>60?'color:red':'color:green'}}">
+          <p>{{project.risk!=null?project.risk:'暂无'}}</p>
+      </view>
+  </van-cell>
+  <van-cell title="采购人" value="{{project.purchaser?project.purchaser:'无'}}" />
+  <van-cell title="代理机构" value="{{project.proxy?project.proxy:'无'}}" />
+  <van-cell title="发布时间" value="{{project.publishTime}}" />
+   <van-collapse value="{{ activeNames }}" bind:change="onChange">
+      <van-collapse-item title="关联企业" name="0">
+        <van-cell value="{{item.name}}" wx:for="{{ project.related_comp }}" />
+      </van-collapse-item>
+    </van-collapse>
+</van-cell-group>
+<view class="load">
+    <!-- <van-loading color="#1989fa" /> -->
+    <van-button icon="cluster-o" type="info" size="small" bind:click="toVisible">查看可视化分析</van-button>
+    </view>
+    <view class="echart" style="{{loading?'margin-left:50000rpx':'margin-left:0px'}}">
+      <ec-canvas id="mychart-dom-bar" type="2d" canvas-id="mychart-bar" ec="{{ ec }}" ></ec-canvas>
+</view>

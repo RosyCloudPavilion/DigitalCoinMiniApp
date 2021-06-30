@@ -1,0 +1,50 @@
+<van-row>
+  <van-col span="12"><van-card class="card"
+      desc="{{'综合风险指数'+source[2]}}"
+      title="{{source[0]}}">
+      <!-- <view  class="price" slot="price">
+        <p>投标项目数</p>
+      </view>
+      <view class="num" slot="num">
+        <p>{{source[1]}}</p>
+      </view> -->
+</van-card></van-col>
+<van-col span="12"><van-card class="card"
+      title="{{target[0]}}">
+      <!-- <view  class="price" slot="price">
+        <p>投标项目数</p>
+      </view>
+      <view class="num" slot="num">
+        <p>{{target[1]}}</p>
+      </view> -->
+</van-card></van-col>
+</van-row>
+
+   <scroll-view>
+    <!-- <van-collapse value="{{ activeNames }}" bind:change="onChange">
+      <van-collapse-item title="共同投标项目" name="1">
+        <van-cell title="项目名称" value="风险程度" />
+        <van-cell wx:for="{{ projects }}" title="{{item[1]}}" value="{{item[8]}}" data-title="{{item[1]}}" bindtap="getProjectDetail"/>
+      </van-collapse-item>
+      <van-collapse-item title="关联路径" name="2" value="{{pathsLen}}">
+        <van-cell title="路径长度" value="路径详情" />
+        <van-cell wx:for="{{ pathsList }}" title="{{item.len}}" value="{{item.path}}" value-class="value"/>
+      </van-collapse-item> -->
+    <!-- </van-collapse> -->
+    <view class="hop"> 
+    <van-button class="button" plain="{{hopIndex!=2?true:false}}" type="primary" bindtap="hop" data-hop="2" size="small">二度关系</van-button>
+    <van-button class="button" plain="{{hopIndex!=3?true:false}}" type="primary" bindtap="hop" data-hop="3" size="small">三度关系</van-button>
+    <van-button class="button" plain="{{hopIndex!=4?true:false}}" type="primary" bindtap="hop" data-hop="4" size="small">四度关系</van-button>
+    </view>
+    <view class="hop"> 
+    <van-button class="button" plain="{{lineIndex!='BID_FOR'?true:false}}" type="warning" bindtap="line" data-line="BID_FOR" size="small">投标关系</van-button>
+    <van-button class="button" plain="{{lineIndex!='OWNED_BY'?true:false}}" type="warning" bindtap="line" data-line="OWNED_BY" size="small">股东关系</van-button>
+    <van-button class="button" plain="{{lineIndex!='INVEST_IN'?true:false}}" type="warning" bindtap="line" data-line="INVEST_IN" size="small">投资关系</van-button>
+    </view>
+    <view class="load" hidden="{{!loading}}">
+    <van-loading color="#1989fa" />
+    </view>
+    <view class="echart">
+      <ec-canvas id="mychart-dom-bar" type="2d" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+    </view>
+  </scroll-view> 

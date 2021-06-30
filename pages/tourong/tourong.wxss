@@ -1,0 +1,39 @@
+.price{
+  color: #b55233;
+  display: inline-block;
+  font-size: 28rpx;
+}
+
+.num{
+  float: right;
+  font-size: 35rpx;
+}
+
+.time{
+  float: right;
+  font-size: 25rpx;
+}
+
+.card{
+  display: block;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+  margin: 20rpx;
+}
+
+.card_desc{
+  white-space: pre-line;
+  margin-top: 20rpx;
+}
+
+.block{
+  font-size: 28rpx;
+  margin: 30rpx;
+  color: #1357c5;
+  display: block;
+  font-weight: bold;
+}
+
+.pcomp{
+  display: block;
+  width: 100%;
+}

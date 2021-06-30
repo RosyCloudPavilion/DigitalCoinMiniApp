@@ -1,0 +1,9 @@
+/* pages/report/report.wxss */
+.van-dropdown-menu{
+  height: 30px !important;
+}
+.load{
+  height: 60rpx;
+  text-align: center;
+  margin-top: 60rpx;
+}
