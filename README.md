@@ -1,3 +1,3 @@
-# eduApp
+# DigitalCoinMiniApp
 
-企业包打听小程序
+数字货币异常交易小程序
